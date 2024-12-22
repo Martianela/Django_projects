@@ -64,14 +64,14 @@ function JobDetail() {
               <div className="mt-10 flex flex-col gap-10">
                 <div>
                   <h3 className="text-lg capitalize">skills Required</h3>
-                  <div className=" mt-3 flex gap-3">
+                  <div className=" mt-3 flex gap-3 flex-wrap">
                     {details?.skills.map((e, index) => {
                       return (
                         <span
                           key={e + index}
                           className="px-4 py-1 bg-gray-50 rounded-full text-gray-600 text-sm"
                         >
-                          {e}bj
+                          {e}
                         </span>
                       );
                     })}

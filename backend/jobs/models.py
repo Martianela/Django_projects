@@ -10,7 +10,7 @@ class Job(models.Model):
     company_name = models.CharField(max_length=255)  # Name of the company
     company_profile_url = models.URLField(blank=True, null=True)  # URL to the company's profile (optional)
     location = models.CharField(max_length=255, blank=True, null=True)  # Job location (optional)
-    posted_date = models.DateField(blank=True, null=True)  # Date the job was posted (optional)
+    posted_date = models.CharField(max_length=60,blank=True, null=True)  # Date the job was posted (optional)
     pay_details = models.CharField(max_length=255, blank=True, null=True)  # Pay details (optional)
     employment_details = models.TextField(blank=True, null=True)  # Employment type/details (optional)
     skills = models.TextField(blank=True, null=True)  # Required skills (optional, can store as comma-separated values)

@@ -14,6 +14,7 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
 
+DOWNLOAD_DELAY = 2  # 2 seconds between each request
 
 DOWNLOAD_HANDLERS = {
     'http': 'scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler',
@@ -25,6 +26,6 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 PLAYWRIGHT_BROWSER_TYPE = 'chromium'  # Can be 'chromium', 'firefox', or 'webkit'
 PLAYWRIGHT_LAUNCH_OPTIONS = {
     'headless': True,  # Set to False to see browser actions
-    'timeout': 30000,  # 30 seconds timeout
+    'timeout': 60000,  # 30 seconds timeout
 }
 DOWNLOAD_DELAY = 2

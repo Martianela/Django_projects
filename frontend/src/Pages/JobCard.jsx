@@ -6,7 +6,7 @@ function JobCard({ jobdata }) {
   const postedDate =
     jobdata?.posted_date && !isNaN(new Date(jobdata.posted_date))
       ? formatDistanceToNow(new Date(jobdata.posted_date), { addSuffix: true })
-      : "Invalid date";
+      : jobdata?.posted_date;
 
   return (
     <div className="bg-white p-2 rounded-xl hover:border border-blue-500">
@@ -28,7 +28,7 @@ function JobCard({ jobdata }) {
             <p>{jobdata.company_name || "Unknown Company"}</p>
           </div>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-right">
           <h5 className="text-lg flex-1">{jobdata.pay_details || "N/A"}</h5>
           <p className="font-light flex-1">
             {jobdata.employment_details || "Employment details not available"}

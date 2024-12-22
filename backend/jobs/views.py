@@ -30,10 +30,9 @@ class JobDetail(APIView):
         try:
             # Fetch the job by its UUID (id)
             job = Job.objects.get(id=id)
-            # Serialize the job data
+           
             serializer = JobSerializer(job)
             # Return the serialized data as response
             return Response(serializer.data)
         except Job.DoesNotExist:
-            # If the job with the given id doesn't exist, return a 404 error
             raise NotFound("Job not found")

@@ -1,0 +1,19 @@
+# Ignore the virtual environment directory
+venv/
+
+# Ignore node_modules for the React project
+frontend/node_modules/
+
+# Ignore Python bytecode files and cache
+*.pyc
+__pycache__/
+
+# Ignore log files
+*.log
+
+# Ignore IDE/editor-specific files (if you're using VSCode, for example)
+.vscode/
+.idea/
+
+# Ignore other common files
+.DS_Store
